@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div class="container">
+<div class="row">
+    
+    <h1>{{viewtitle}}</h1>
+
+<form action="/library" method="post" autocomplete="off">
+    <div>
+        <lable>Library Name</lable>
+        <input type="text" class="form-control" name="libraryname" placeholder="Library Name">
+        <div>
+            {{user.librarynameError}}
+        </div>
+    </div>
+    <div>
+        <label>Department</label>
+        <input type="text" class="form-control" name="department" placeholder="Department">
+        <div>
+            {{user.departmentError}}
+        </div>
+    </div>
+    <div>
+        <lable>Book Name</lable>
+        <input type="text" class="form-control" name="department" placeholder="Book Name">
+    </div>
+    <div>
+        <lable>Auther</lable>
+        <input type="text" class="form-control" name="library" placeholder="Auther">  
+    </div>
+        <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Submit</button>
+   </div>
+</form>
+<div>
+     <a href="/user"><button class="btn btn-primary" style="float: right; margin-top: 20px;">Home</button></a>
+</div>
+</div>
+
+    </div>
+</body>
+</html>

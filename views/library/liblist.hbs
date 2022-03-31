@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<a href="/user"><button class="btn btn-primary" style="margin-top: 20px;">Home</button></a>
+<table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Library Name</th>
+                <th>Department</th>
+                <th>Book</th>
+                <th>Auther</th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each llist}}
+            <tr>
+                <td>{{this.libraryname}}</td>
+                <td>{{this.department}}</td>
+                <td>{{this.book}}</td>
+                <td>{{this.auther}}</td>
+                <td><a href="/library/{{this._id}}">Update</a>
+                    <a href="/library/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this Record ?');">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

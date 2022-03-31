@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div class="container">
+<div class="row">
+    
+    <h1>{{viewtitle}}</h1>
+
+<form action="/book" method="post" autocomplete="off">
+<input type="hidden" class="form-control" name="_id" value="{{user._id}}">
+    <div>
+        <lable>Book Name</lable>
+        <input type="text" class="form-control" name="bookname" placeholder="Bookname">
+        <div>
+            {{user.booknameError}}
+        </div>
+    </div>
+    <div>
+        <label>Book Price</label>
+        <input type="text" class="form-control" name="bookprice" placeholder="Book Price">
+        <div>
+            {{user.bookpriceError}}
+        </div>
+    </div>
+    <div>
+        <lable>Library</lable>
+        <input type="text" class="form-control" name="library" placeholder="Library">
+    </div>
+    <div>
+        <lable>Auther</lable>
+        <input type="text" class="form-control" name="library" placeholder="Auther">  
+    </div>
+        <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Submit</button>
+   </div>
+</form>
+<div>
+     <a href="/user"><button class="btn btn-primary" style="float: right; margin-top: 20px;">Home</button></a>
+</div>
+</div>
+
+    </div>
+</body>
+</html>

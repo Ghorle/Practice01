@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<a href="/user"><button class="btn btn-primary" style="margin-top: 20px;">Home</button></a>
+<table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Phone</th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each list}}
+            <tr>
+                <td>{{this.username}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.password}}</td>
+                <td>{{this.phone}}</td>
+                <td><a href="/user/{{this._id}}">Update</a>
+                    <a href="/user/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this Record ?');">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

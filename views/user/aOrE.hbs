@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div class="container">
+<div class="row">
+
+<h1>{{viewtitle}}</h1>
+
+<form action="/user" method="post" autocomplete="off">
+<input type="hidden" class="form-control" name="_id" value="{{user._id}}">
+    <div>
+        <lable>Username</lable>
+        <input type="text" name="username" class="form-control" placeholder="Username" value="{{user.username}}">
+        <div>
+            {{user.usernameError}}
+        </div>
+    </div>
+    <div>
+        <lable>Email</lable>
+        <input type="email" name="email" class="form-control" placeholder="Email" value="{{user.email}}">
+         <div>
+            {{user.emailError}}
+        </div>
+    </div>
+    <div>
+        <lable>Password</lable>
+        <input type="text" name="password" class="form-control" placeholder="Password" value="{{user.password}}">
+    </div>
+    <div>
+        <lable>Phone</lable>
+        <input type="text" name="phone" class="form-control" placeholder="Phone" value="{{user.phone}}">
+    </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Submit</button>
+       
+</form>
+   <div>
+     <a href="/user"><button class="btn btn-primary" style="float: right; margin-top: 20px;">Home</button></a>
+</div> 
+</div>
+
+    </div>
+</body>
+</html>
